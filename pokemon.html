@@ -9,18 +9,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html"> <img id="logo_image" src="images/logo_card_image.png" class="logo"/></a>
+    <header class="utility_bar">
+        <div>
+            <a href="index.html"> <img id="logo_image" src="images/logo_card_image.png" class="logo"/></a>
+        </div>
+        <div>
+            <form action="/search" method="GET" class="search-form">
+                <input 
+                    type="search" 
+                    name="q" 
+                    placeholder="Search..." 
+                    aria-label="Search"
+                    required
+                >
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div><a href="index.html"> <img id="profile_image" src="images/profile_icon.png" class="logo"/></a></div>
+        <div><a href="index.html"> <img id="cart_image" src="images/shopping cart.png" class="logo"/></a></div>
+    </header>
 
-        
-            <div class="container">
+            <header class="product_nav">
                 <div><a href="one-piece.html"><img id="product_image" src="images/one_piece_card_game.webp" class="product_image"/></a></div>
                 <div><a href="magic.html"><img id="product_image" src="images/magic-the-gathering.png" class="product_image"/></a></div> 
                 <div><a href="yu-gi-oh.html"><img id="product_image" src="images/yu-gi-oh.png" class="product_image"/></a></div>
-            </div>
-
-        </nav>
-    </header>
+            </header>
     
 </body>
 </html>

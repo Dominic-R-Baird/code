@@ -12,8 +12,8 @@
 }
 
 .logo {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     float: left;
     background-color: aliceblue;
     padding: 20px;
@@ -21,17 +21,22 @@
     margin-right: auto;
 }
 
+
 .product_image {
     width: 240px;
     height: 240px;
 }
 
 
-.product_nav {
+.products_nav {
   display: flex;
   justify-content: space-evenly;
 }
 
+.nrelease_bar {
+  display: flex;
+  justify-content: space-evenly;
+}
 .search-form {
   display: flex;
   align-items: center;

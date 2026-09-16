@@ -7,16 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CarefreeCards.com</title>
     <link rel="stylesheet" href="style.css">
+    <script src="pop-up.js" defer></script>
 </head>
 <body>
+<style>
+/* Style the popover itself */
+#my-popover-div {
+text-align:center;
+padding:40px;
+background-color:white;
+font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+color: #5170ff;
+}
+
+
+/* Style the button to look less like a button and more just an image to press*/
+.invisible-button {
+background: none;
+cursor: pointer;
+border: none;
+}
+
+
+/* Style the popover when it opens - THIS IS THE POSITIONING STUFF*/
+[popover]:popover-open {
+/* 1. Clear the browser's default centering rules */
+margin: 0;
+inset: auto;
+/* 2. Tell the popover to anchor directly to its triggering button */
+position-anchor: auto;
+/* 3. Place it directly below the button, aligning to the left edge */
+position-area: right;
+}
+</style>
     <header class="utility_bar">
-        <div>
-            <a href="index.html"> <img id="logo_image" src="images/logo_card_image.png" class="logo"/></a>
+        <div popover id="my-popover-div">
+            <button><a href="index.html">Home</a></button>
+            
+            <button popovertarget="my-popover-div" popovertargetaction="hide">Close</button>
         </div>
+
+        <button class="invisible-button" popovertarget="my-popover-div">
+            <div class="logo"><img id="logo_image" src="images/logo_card_image-scaled.png"></div>  
+        </button>
         <h1 class="h1">Find out all you need to know about new releases and what we have up on this website</h1>
     </header>
-   
-    
+
+
     <header class="products_nav">
         <div><a href="one-piece.html"><img id="product_image" src="images/one_piece_card_game.webp" class="product_image"/></a></div>
         <div><a href="magic.html"><img id="product_image" src="images/mtg-logo.webp" class="product_image"/></a></div>
@@ -41,10 +78,10 @@
         <div class="item-card">
             <img src="images/op17.jpg" class="item-images"/>
             <div class="item-details">
-                <h3> One Piece Booster Box - The World's Strogest Warriors</h3>
+                <h3> One Piece Booster Box - The World's Strongest Warriors</h3>
             </div>
         </div>
     </main>
-    
+
 </body>
 </html>

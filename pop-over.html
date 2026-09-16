@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+/* Style the popover itself */
+#my-popover-div {
+  text-align:center;
+  padding:40px;
+  background-color:lightblue;
+  font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Style the button to look more like an article than a default "button" */
+.invisible-button {
+  font-family: serif;
+  font-size: 1rem;
+  background: none;
+  border: solid;
+  border-radius: 15px;
+  padding: 20;
+  cursor: pointer;
+}
+
+
+/* Style the popover when it opens - THIS IS THE POSITIONING STUFF*/
+[popover]:popover-open {
+  /* 1. Clear the browser's default centering rules */
+  margin: 0;
+  inset: auto;
+  /* 2. Tell the popover to anchor directly to its triggering button */
+  position-anchor: auto;
+  /* 3. Place it directly below the button, aligning to the left edge */
+  position-area: right;
+}
+</style>
+
+
+<h1>The popover Attribute</h1>
+
+
+<div popover id="my-popover-div">
+  <h2>Popover</h2>
+  <hr>
+  <p>A popover is an element that is placed on top of everything else.</p>
+  <p>It can be used when you want to tell something important.</p>
+  <button popovertarget="my-popover-div" popovertargetaction="hide">Close</button>
+</div>
+
+
+<button class="invisible-button" popovertarget="my-popover-div">Click me!
+  <div>button with a nested div and <b>other</b> stuff.</div>
+</button>
+
+
+<p>You can style popover elements with CSS.</p>
+<p>Click the button to show the popover element.</p>
+
+
+</body>
+</html>

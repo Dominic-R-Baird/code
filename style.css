@@ -30,6 +30,31 @@
   color: white;
 }
 
+iframe{
+  width: 100%; /*Overrides style set in embedded HTML - so that form fills the modal window*/
+}
+
+#modal {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+}
+
+.modalcontent {
+  position: absolute;
+  top: 0; 
+  left: 50%; /*This rule and the transform rule below centres the form horizontally on the page*/
+  transform: translate(-50%, 0);
+  background: #fff;
+  width: 85%;
+  padding: 10px;
+}
+
 /*made to hold the logo iamges of the tcg companies*/
 .products_nav {
   display: flex;

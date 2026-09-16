@@ -10,45 +10,24 @@
     <script src="pop-up.js" defer></script>
 </head>
 <body>
-<style>
-/* Style the popover itself */
-#my-popover-div {
-text-align:center;
-padding:40px;
-background-color:white;
-font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-color: #5170ff;
-}
-
-
-/* Style the button to look less like a button and more just an image to press*/
-.invisible-button {
-background: none;
-cursor: pointer;
-border: none;
-}
-
-
-/* Style the popover when it opens - THIS IS THE POSITIONING STUFF*/
-[popover]:popover-open {
-/* 1. Clear the browser's default centering rules */
-margin: 0;
-inset: auto;
-/* 2. Tell the popover to anchor directly to its triggering button */
-position-anchor: auto;
-/* 3. Place it directly below the button, aligning to the left edge */
-position-area: right;
-}
-</style>
+    <div class="container">
+        <div id="modal">
+            <div class="modalcontent">
+                <button id="close-form">X</button>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScvHuwEEh1YDRuY-b7L3Yw40M72NSxSW4InsXQybSyeMZY7VA/viewform" width="640" height="695" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </div>
+    </div>
     <header class="utility_bar">
+        
         <div popover id="my-popover-div">
             <button><a href="index.html">Home</a></button>
-            
+            <button popovertarget="my-popover-div" popovertargetaction="hide" id="get-to-know-you">Get to know you</button>
             <button popovertarget="my-popover-div" popovertargetaction="hide">Close</button>
         </div>
 
         <button class="invisible-button" popovertarget="my-popover-div">
-            <div class="logo"><img id="logo_image" src="images/logo_card_image-scaled.png"></div>  
+            <div class="logo"><img id="logo_image" src="images/logo_card_image.png"></div>  
         </button>
         <h1 class="h1">Find out all you need to know about new releases and what we have up on this website</h1>
     </header>

@@ -14,6 +14,35 @@
   font-size: 24px;
 }
 
+/* Style the popover itself */
+#my-popover-div {
+text-align:center;
+padding:40px;
+background-color:white;
+font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+color: #5170ff;
+}
+
+
+/* Style the button to look less like a button and more just an image to press*/
+.invisible-button {
+background: none;
+cursor: pointer;
+border: none;
+}
+
+
+/* Style the popover when it opens - THIS IS THE POSITIONING STUFF*/
+[popover]:popover-open {
+/* 1. Clear the browser's default centering rules */
+margin: 0;
+inset: auto;
+/* 2. Tell the popover to anchor directly to its triggering button */
+position-anchor: auto;
+/* 3. Place it directly below the button, aligning to the left edge */
+position-area: right;
+}
+
 /*sizing and positioning the websites logo image*/
 .logo {
     width: 80px;
@@ -35,6 +64,7 @@ iframe{
 }
 
 #modal {
+  display: none;
   position: fixed;
   font-family: Arial, Helvetica, sans-serif;
   top: 0;

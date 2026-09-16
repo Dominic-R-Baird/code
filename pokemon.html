@@ -7,13 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CarefreeCards.com</title>
     <link rel="stylesheet" href="style.css">
+    <script src="pop-up.js" defer></script>
 </head>
 <body>
-    <header class="utility_bar">
-        <div>
-            <a href="index.html"> <img id="logo_image" src="images/logo_card_image.png" class="logo"/></a>
+    <div class="container">
+        <div id="modal">
+            <div class="modalcontent">
+                <button id="close-form">X</button>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScvHuwEEh1YDRuY-b7L3Yw40M72NSxSW4InsXQybSyeMZY7VA/viewform" width="640" height="695" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
         </div>
-        <h1 class="h1">Current releases we have up from Pokemon TCG</h1>
+    </div>
+    <header class="utility_bar">
+        
+        <div popover id="my-popover-div">
+            <button><a href="index.html">Home</a></button>
+            <button popovertarget="my-popover-div" popovertargetaction="hide" id="get-to-know-you">Get to know you</button>
+            <button popovertarget="my-popover-div" popovertargetaction="hide">Close</button>
+        </div>
+
+        <button class="invisible-button" popovertarget="my-popover-div">
+            <div class="logo"><img id="logo_image" src="images/logo_card_image.png"></div>  
+        </button>
+        <h1 class="h1">Current releases we have up for Pokemon</h1>
     </header>
 
     <header class="products_nav">
